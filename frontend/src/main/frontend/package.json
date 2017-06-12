@@ -11,6 +11,9 @@
     "e2e": "ng e2e"
   },
   "private": true,
+  "scripts": {
+    "bower-install" : "bower install"
+},
   "dependencies": {
     "@angular/animations": "^4.0.0",
     "@angular/common": "^4.0.0",

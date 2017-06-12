@@ -28,6 +28,15 @@
                 </configuration>
 
                 <executions>
+				<execution>
+  <id>npm bower-install</id>
+  <goals>
+    <goal>npm</goal>
+  </goals>
+  <configuration>
+    <arguments>run bower-install</arguments>
+  </configuration>
+</execution>
                     <execution>
                         <id>install node and npm</id>
                         <goals>
