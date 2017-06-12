@@ -6,7 +6,7 @@
     <artifactId>frontend</artifactId>
 
     <name>frontend</name>
-    <description>The famlab frontend project</description>
+    <description>The ng2boot frontend project</description>
 
     <parent>
         <groupId>com.pjatk.famlab</groupId>
