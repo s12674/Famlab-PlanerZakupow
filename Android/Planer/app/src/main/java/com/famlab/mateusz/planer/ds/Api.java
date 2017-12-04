@@ -1,5 +1,6 @@
 package com.famlab.mateusz.planer.ds;
 
+import com.famlab.mateusz.planer.ds.models.Categories;
 import com.famlab.mateusz.planer.ds.models.Product;
 import com.famlab.mateusz.planer.ds.models.Products;
 import com.famlab.mateusz.planer.ds.models.ResponseAddProduct;
@@ -17,15 +18,18 @@ import retrofit2.http.Query;
  */
 
 interface Api {
-    @GET("product.json")
+    @GET("products.json")
     Observable<Response<Products>> getProducts();
 
+    @GET("categories.json")
+    Observable<Response<Categories>> getCategories();
+
     // Pobranie produktów z konkretnymi parametrami w body
-    @GET("product.json")
+    @GET("products.json")
     Observable<Response<Products>> getProducts(@Query("lat") double lat, @Query("lon") double lon);
 
     // Dodanie produktu
-    @POST("product.json")
+    @POST("products.json")
     @Headers({ "Content-Type: application/json;charset=UTF-8"})
     Observable<Response<ResponseAddProduct>> addProduct(@Body Product product);
 }

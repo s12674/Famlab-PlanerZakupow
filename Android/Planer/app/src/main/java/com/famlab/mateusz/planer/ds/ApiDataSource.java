@@ -1,5 +1,6 @@
 package com.famlab.mateusz.planer.ds;
 
+import com.famlab.mateusz.planer.ds.models.Categories;
 import com.famlab.mateusz.planer.ds.models.Product;
 import com.famlab.mateusz.planer.ds.models.Products;
 import com.famlab.mateusz.planer.ds.models.ResponseAddProduct;
@@ -28,7 +29,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiDataSource {
 
-    public final static String URL = "http://ar.actumlab.com/";
+    public final static String URL = "http://360.actumlab.com/web/uploads/mateusz/";
     private Api api;
 
     public ApiDataSource() {
@@ -50,6 +51,11 @@ public class ApiDataSource {
     // zapytanie o produkty
     public Observable<Response<Products>> getProducts() {
         return api.getProducts().subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread());
+    }
+
+    public Observable<Response<Categories>> getCategories() {
+        return api.getCategories().subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread());
     }
 

@@ -5,9 +5,9 @@ package com.famlab.mateusz.planer.ds.models;
  */
 
 public class Producer {
-    private int id;
+    public int id;
 
-    private Contact contact;
+    public Contact contact;
 
-    private String name;
+    public String name;
 }

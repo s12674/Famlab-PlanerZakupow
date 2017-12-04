@@ -8,9 +8,9 @@ import java.util.List;
 
 public class ShoppingList {
 
-    private Long id;
-    private List<Product> products;
-    private String name;
-    private Long totalPrice;
+    public Long id;
+    public List<Product> products;
+    public String name;
+    public Long totalPrice;
 
 }

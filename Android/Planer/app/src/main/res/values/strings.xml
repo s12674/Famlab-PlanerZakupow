@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Planer Zakupów</string>
+    <string name="title_activity_main">MainActivity</string>
 </resources>

@@ -8,14 +8,14 @@ import java.util.List;
 
 public class User {
 
-    private int id;
-    private Status status;
-    private Role role;
-    private List<Shop> favouriteShops;
-    private List<ShoppingList> shoppinglists;
-    private String email;
-    private String password;
-    private String username;
-    private float rate; // ocena wiarygodnosci danego uzytkownika
+    public int id;
+    public Status status;
+    public Role role;
+    public List<Shop> favouriteShops;
+    public List<ShoppingList> shoppinglists;
+    public String email;
+    public String password;
+    public String username;
+    public float rate; // ocena wiarygodnosci danego uzytkownika
 
 }

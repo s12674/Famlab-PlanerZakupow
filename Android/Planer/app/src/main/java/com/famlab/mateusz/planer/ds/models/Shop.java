@@ -7,13 +7,13 @@ import java.util.List;
  */
 
 public class Shop {
-    private Long id;
-    private Contact contact;
-    private User shopkeeper;
-    private List<Product> products;
-    private String name;
-    private String location;
-    private String description;
-    private float rate; // ocena sklepu nadana przez użytkowników
-    private int countOfRates; // ilość ocen użytkowników
+    public Long id;
+    public Contact contact;
+    public User shopkeeper;
+    public List<Product> products;
+    public String name;
+    public String location;
+    public String description;
+    public float rate; // ocena sklepu nadana przez użytkowników
+    public int countOfRates; // ilość ocen użytkowników
 }

@@ -5,8 +5,8 @@ package com.famlab.mateusz.planer.ds.models;
  */
 
 public class Contact {
-    private int id;
-    private String phoneNumber;
-    private String address;
-    private String email;
+    public int id;
+    public String phoneNumber;
+    public String address;
+    public String email;
 }

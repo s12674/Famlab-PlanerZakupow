@@ -7,11 +7,12 @@ import java.util.List;
  */
 
 public class Product {
-    private Long id;
-    private Producer producer;
-    private List<String> images;
-    private String name;
-    private String description;
-    private String country;
-    private Long price;
+    public Long id;
+    public Producer producer;
+    public List<String> images;
+    public String name;
+    public String description;
+    public String country;
+    public Long price;
+    public Category category;
 }
