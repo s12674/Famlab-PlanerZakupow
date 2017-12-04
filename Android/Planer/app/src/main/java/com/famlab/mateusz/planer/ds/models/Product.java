@@ -15,4 +15,5 @@ public class Product {
     public String country;
     public Long price;
     public Category category;
+    public String thumbnail;
 }
