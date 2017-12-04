@@ -1,12 +1,13 @@
 package com.famlab.mateusz.planer.ds.models;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Created by Mateusz on 30.11.2017.
  */
 
-public class Product {
+public class Product implements Serializable {
     public Long id;
     public Producer producer;
     public List<String> images;

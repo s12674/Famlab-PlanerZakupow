@@ -1,5 +1,6 @@
 package com.famlab.mateusz.planer.ui.products;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -25,7 +26,10 @@ public class ProductsActivity extends AppCompatActivity implements ProductsContr
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_products);
         presenter = new ProductsPresenter(this, new ApiDataSource());
-        presenter.getProducts();
+        Intent i = getIntent();
+        Bundle bundle = i.getExtras();
+        int id = bundle.getInt("id");
+        presenter.getProducts(id);
     }
 
     public void showProducts(Products products){

@@ -28,6 +28,12 @@ interface Api {
     @GET("products.json")
     Observable<Response<Products>> getProducts(@Query("lat") double lat, @Query("lon") double lon);
 
+    @GET("one.json")
+    Observable<Response<Products>> getProductsOne();
+
+    @GET("two.json")
+    Observable<Response<Products>> getProductsTwo();
+
     // Dodanie produktu
     @POST("products.json")
     @Headers({ "Content-Type: application/json;charset=UTF-8"})

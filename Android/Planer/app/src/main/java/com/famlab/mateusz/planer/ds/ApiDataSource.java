@@ -54,6 +54,16 @@ public class ApiDataSource {
                 .observeOn(AndroidSchedulers.mainThread());
     }
 
+    public Observable<Response<Products>> getOne() {
+        return api.getProductsOne().subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread());
+    }
+
+    public Observable<Response<Products>> getTwo() {
+        return api.getProductsTwo().subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread());
+    }
+
     public Observable<Response<Categories>> getCategories() {
         return api.getCategories().subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread());

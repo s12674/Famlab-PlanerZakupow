@@ -8,6 +8,7 @@ import com.famlab.mateusz.planer.ds.models.Products;
 
 public interface ProductsContract {
     interface Presenter{
+        void getProducts(int id);
         void getProducts();
     }
 

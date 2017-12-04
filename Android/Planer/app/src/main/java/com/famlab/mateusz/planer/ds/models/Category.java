@@ -5,7 +5,7 @@ package com.famlab.mateusz.planer.ds.models;
  */
 
 public class Category {
-    public Long id;
+    public int id;
     public String name;
     public String description;
     public String thumbnail;

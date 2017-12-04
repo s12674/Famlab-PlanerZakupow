@@ -1,5 +1,6 @@
 package com.famlab.mateusz.planer.ui.products;
 
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,7 +10,9 @@ import android.widget.Filterable;
 
 import com.famlab.mateusz.planer.R;
 import com.famlab.mateusz.planer.ds.models.Product;
+import com.famlab.mateusz.planer.ui.details.DetailsActivity;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
@@ -51,13 +54,13 @@ public class ProductsAdapter extends RecyclerView.Adapter<ProductViewHolder> imp
         // ustaw produkt w widoku za pomocą bindingu
         holder.setProduct(product);
 
-        // ustaw akcje po kliknieciu
-//        holder.itemView.setOnClickListener(view->{
-//            Intent intent = new Intent(holder.itemView.getContext(), DetailsActivity.class);
-//            intent.putExtra("id", product.id);
-//            view.getContext().startActivity(intent);
-//
-//        });
+//         ustaw akcje po kliknieciu
+        holder.itemView.setOnClickListener(view->{
+            Intent intent = new Intent(holder.itemView.getContext(), DetailsActivity.class);
+            intent.putExtra("product", (Serializable) product);
+            view.getContext().startActivity(intent);
+
+        });
     }
 
     // Dodanie filtra
