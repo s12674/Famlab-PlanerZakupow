@@ -58,6 +58,7 @@ public class ProductsAdapter extends RecyclerView.Adapter<ProductViewHolder> imp
         holder.itemView.setOnClickListener(view->{
             Intent intent = new Intent(holder.itemView.getContext(), DetailsActivity.class);
             intent.putExtra("product", (Serializable) product);
+            System.out.println(product.description + " description");
             view.getContext().startActivity(intent);
 
         });

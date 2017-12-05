@@ -14,7 +14,7 @@ public class Product implements Serializable {
     public String name;
     public String description;
     public String country;
-    public Long price;
-    public Category category;
+    public Float price;
+    public Categories categories;
     public String thumbnail;
 }
