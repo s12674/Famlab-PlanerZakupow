@@ -62,6 +62,16 @@ public class ProductsPresenter implements ProductsContract.Presenter {
                     }
                 });
                 break;
+            case 3:
+                apiDataSource.getThree().subscribe(productsResponse -> {
+
+                    if (productsResponse.isSuccessful()) {
+                        view.showProducts(productsResponse.body());
+                    } else {
+                        // błąd
+                    }
+                });
+                break;
         }
 
     }

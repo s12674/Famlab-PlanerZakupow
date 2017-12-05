@@ -34,6 +34,9 @@ interface Api {
     @GET("two.json")
     Observable<Response<Products>> getProductsTwo();
 
+    @GET("three.json")
+    Observable<Response<Products>> getProductsThree();
+
     // Dodanie produktu
     @POST("products.json")
     @Headers({ "Content-Type: application/json;charset=UTF-8"})

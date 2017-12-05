@@ -13,6 +13,7 @@ import com.famlab.mateusz.planer.R;
 import com.famlab.mateusz.planer.databinding.FragmentDetailsBinding;
 import com.famlab.mateusz.planer.ds.ApiDataSource;
 import com.famlab.mateusz.planer.ds.models.Product;
+import com.famlab.mateusz.planer.ui.MapsActivity;
 
 /**
  * Created by Mateusz on 04.12.2017.
@@ -33,8 +34,9 @@ public class DetailsFragment extends Fragment implements DetailsContract.View {
         Bundle bundle = intent.getExtras();
         presenter = new DetailsPresenter(this, new ApiDataSource());
         product = (Product) bundle.getSerializable("product");
+        if(product != null)
         presenter.getProduct(product);
-        System.out.println(product.name + " PRODUCT");
+
         return binding.getRoot();
     }
 
@@ -46,6 +48,7 @@ public class DetailsFragment extends Fragment implements DetailsContract.View {
     @Override
     public void onResume(){
         super.onResume();
+        if(product != null)
         presenter.getProduct(product);
     }
 
