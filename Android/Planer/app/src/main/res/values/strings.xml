@@ -3,4 +3,5 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_maps">Map</string>
     <string name="show_map">Pokaż sklep na mapie</string>
+    <string name="add_to_fav">Dodaj do ulubionych</string>
 </resources>

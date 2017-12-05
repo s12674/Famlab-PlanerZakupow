@@ -1,4 +1,4 @@
-package com.famlab.mateusz.planer.ui;
+package com.famlab.mateusz.planer.ui.utils;
 
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
